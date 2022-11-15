@@ -30,7 +30,7 @@ public class ModelController {
         this.ModelService = ModelService;
     }
 
-    @PostMapping
+    @PostMapping("")
     public ResponseEntity<Model> create(@RequestBody CreateModelRequest request, UriComponentsBuilder builder){
         Model Model = CreateModelRequest.dtoToEntityMapper().apply(request);
         ModelService.addModel(Model);

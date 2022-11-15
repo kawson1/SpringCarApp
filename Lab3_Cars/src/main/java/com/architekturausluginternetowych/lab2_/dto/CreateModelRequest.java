@@ -10,11 +10,11 @@ import java.util.function.Function;
 @Getter
 public class CreateModelRequest {
 
-    private String name;
+    private String model;
 
     public static Function<CreateModelRequest, Model> dtoToEntityMapper(){
         return request -> Model.builder()
-                .name(request.getName())
+                .name(request.getModel())
                 .build();
     }
 

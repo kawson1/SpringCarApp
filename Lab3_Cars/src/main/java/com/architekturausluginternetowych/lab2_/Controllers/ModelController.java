@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import java.util.List;
 import java.util.Optional;
 
 
@@ -22,7 +23,7 @@ public class ModelController {
         this.ModelService = ModelService;
     }
 
-    @PostMapping
+    @PostMapping("")
     public ResponseEntity<Model> create(@RequestBody CreateModelRequest request, UriComponentsBuilder builder){
         Model Model = CreateModelRequest.dtoToEntityMapper().apply(request);
         ModelService.addModel(Model);
@@ -44,4 +45,8 @@ public class ModelController {
         return ResponseEntity.notFound().build();
     }
 
+    @GetMapping("test")
+    public List<Model> findAllModels(){
+        return ModelService.findAllModels();
+    }
 }
