@@ -4,8 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/AUI.iml" filepath="$PROJECT_DIR$/.idea/AUI.iml" />
       <module fileurl="file://$PROJECT_DIR$/CarApiGateway/CarApiGateway.iml" filepath="$PROJECT_DIR$/CarApiGateway/CarApiGateway.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Lab3_Models/Lab2_.iml" filepath="$PROJECT_DIR$/Lab3_Models/Lab2_.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lab3_Cars/Lab2_ (1).iml" filepath="$PROJECT_DIR$/Lab3_Cars/Lab2_ (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lab3_Models/Lab2_ (2).iml" filepath="$PROJECT_DIR$/Lab3_Models/Lab2_ (2).iml" />
       <module fileurl="file://$PROJECT_DIR$/WebView/WebView.iml" filepath="$PROJECT_DIR$/WebView/WebView.iml" />
     </modules>
   </component>

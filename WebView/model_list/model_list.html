@@ -7,7 +7,8 @@
     <meta name="author" content="Łukasz Kawa"/>
     <title>Car & Models</title>
     <link rel="stylesheet" href="styles.css"/>
-    <script src="script.js" async="async"></script>
+    <script src="../script.js" defer="defer"></script>
+    <script type="module" src="model_list.js" defer="defer"></script>
 </head>
 <body>
 <div class="container">
@@ -24,30 +25,36 @@
     </nav>
 
     <section class="main-section">
-
+        <!--LISTING MODEL SECTION-->
         <article class="text--justified">
             <header><h2>Models</h2></header>
             <table class="data-table">
                 <thead>
                 <tr>
                     <th>name</th>
-                    <th>view</th>
-                    <th>delete</th>
+                    <th>options</th>
                 </tr>
                 </thead>
                 <tbody id="tableBody">
-                <tr>
-                    <td>name</td>
-                    <td><a href="#">view</a></td>
-                    <td>
-                        <button class="ui-button ui-control">delete</button>
-                    </td>
-                </tr>
                 </tbody>
             </table>
         </article>
 
+        <!--ADDING MODEL SECTION-->
+        <aside>
+            <header><h2>Add model</h2></header>
+            <form id="modelForm">
+                <label for="modelName">Model name:</label><br>
+                <input type="text" id="modelName" name="modelName"><br>
+
+                <label for="horsePower">Horse power:</label><br>
+                <input type="number" id="horsePower" name="horsePower"><br>
+
+                <input type="submit" value="Submit">
+            </form>
+        </aside>
     </section>
+
 
     <footer class="footer">
         <p>Copyright &copy; 2022, Łukasz Kawa</p>
