@@ -1,0 +1,82 @@
+GET http://localhost:8080/api/models/e46/cars
+
+<> 2022-11-16T171541.200.json
+
+###
+
+GET http://localhost:8080/api/cars/1
+
+<> 2022-11-16T171535.200.json
+
+###
+
+GET http://localhost:8080/api/models/e46
+
+<> 2022-11-16T171518.200.json
+
+###
+
+GET http://localhost:8080/api/cars/1/model
+
+<> 2022-11-16T171512.404.json
+
+###
+
+GET http://localhost:8080/api/cars/1/model
+
+<> 2022-11-16T171508.404.json
+
+###
+
+GET http://localhost:8080/api/cars/1/model
+
+<> 2022-11-16T171506.404.json
+
+###
+
+GET http://localhost:8080/api/cars/
+
+<> 2022-11-16T171503.200.json
+
+###
+
+GET http://localhost:8080/api/cars/1
+
+<> 2022-11-16T171502.200.json
+
+###
+
+POST http://localhost:8080/api/cars
+Content-Type: application/json
+
+{
+"vin": "testowy1",
+"color": "niebieski",
+  "model": "e46"
+}
+
+###
+
+POST http://localhost:8080/api/models
+Content-Type: application/json
+
+{
+  "name": "e46",
+  "hp": 231
+}
+
+###
+
+POST http://localhost:8080/api/cars
+Content-Type: application/json
+
+{
+"vin": "testowy1",
+"color": "niebieski",
+  "model": "e46"
+}
+
+<> 2022-11-16T171451.500.json
+
+###
+

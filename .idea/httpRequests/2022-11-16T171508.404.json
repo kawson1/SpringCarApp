@@ -1,0 +1,8 @@
+{
+  "timestamp": "2022-11-16T16:15:08.267+00:00",
+  "path": "/api/cars/1/model",
+  "status": 404,
+  "error": "Not Found",
+  "message": null,
+  "requestId": "9521a7ed-7"
+}
