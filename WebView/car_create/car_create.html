@@ -8,7 +8,7 @@
     <title>Car & Models</title>
     <link rel="stylesheet" href="styles.css"/>
     <script src="../script.js" defer="defer"></script>
-    <script type="module" src="model_view.js" defer="defer"></script>
+    <script type="module" src="car_create.js" defer="defer"></script>
 </head>
 <body>
 <div class="container">
@@ -26,14 +26,18 @@
 
     <section class="main-section">
 
-        <header><h3>Model details</h3></header>
-        <p id="modelName">Name:&nbsp</p>
-        <p id="modelHp">Hp:&nbsp</p>
-        <button id="addCarButton">Add car</button>
-        <h4>Cars:</h4>
-        <table id="carsTable">
+        <!--LISTING MODEL SECTION-->
+        <header><h2>Car</h2></header>
+        <form id="carForm">
+            <label for="VIN">VIN:</label><br>
+            <input type="text" id="VIN" name="VIN"><br>
 
-        </table>
+            <label for="color">Color:</label><br>
+            <input type="text" id="color" name="color"><br>
+
+            <input type="submit" value="Create">
+        </form>
+
     </section>
 
 

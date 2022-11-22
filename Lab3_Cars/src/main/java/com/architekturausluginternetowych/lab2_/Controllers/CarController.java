@@ -41,9 +41,9 @@ public class CarController {
         // return ResponseEntity.ok(car);
     }
 
-    @GetMapping("{id}")
-    public ResponseEntity<GetCarResponse> findCarById(@PathVariable Long id){
-        return carService.findCarById(id)
+    @GetMapping("{vin}")
+    public ResponseEntity<GetCarResponse> findCarByVin(@PathVariable String vin){
+        return carService.findCarByVIN(vin)
                 .map(car -> ResponseEntity.ok(GetCarResponse.entityToDtoMapper().apply(car)))
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
@@ -73,9 +73,9 @@ public class CarController {
         return ResponseEntity.notFound().build();
     }
 
-    @PutMapping("{id}")
-    public ResponseEntity<Void> updateCar(@RequestBody UpdateCarRequest request, @PathVariable Long id){
-        Optional<Car> car = carService.findCarById(id);
+    @PutMapping("{vin}")
+    public ResponseEntity<Void> updateCar(@RequestBody UpdateCarRequest request, @PathVariable String vin){
+        Optional<Car> car = carService.findCarByVIN(vin);
         if(car.isPresent()){
             UpdateCarRequest.dtoToEntityUpdater().apply(car.get(), request);
             carService.updateCar(car.get());

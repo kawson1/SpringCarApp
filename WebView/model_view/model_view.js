@@ -1,7 +1,11 @@
 import {getBackendUrl} from "../js/configuration.js";
-import {clearElementChildren, createButtonCell} from "../js/dom_utils.js";
+import {clearElementChildren, createButtonCell, createTextCell} from "../js/dom_utils.js";
 
 window.addEventListener('load', ()=>{
+    const urlParams = new URLSearchParams(window.location.search);
+    const addCarButton = document.getElementById('addCarButton');
+    addCarButton.addEventListener('click',
+        () => document.location.href = '../car_create/car_create.html?model=' + urlParams.get('model'));
     fetchAndDisplayModelDetails();
     fetchAndDisplayCars();
 })
@@ -40,18 +44,22 @@ function fetchAndDisplayCars(){
 }
 
 function displayCars(cars){
-    const ul = document.getElementById('carList');
-    clearElementChildren(ul)
+    const table = document.getElementById('carsTable');
+    clearElementChildren(table);
     cars.cars.forEach(VIN => {
-        ul.appendChild(createListElement(VIN));
+        table.appendChild(createTableRow(VIN));
     })
 }
 
-function createListElement(car){
-    const li = document.createElement('li');
-    li.appendChild(document.createTextNode(car));
-    li.appendChild(createButtonCell('Delete', () => deleteCar(car)));
-    return li;
+function createTableRow(car) {
+    const urlParams = new URLSearchParams(window.location.search);
+
+    let tr = document.createElement('tr');
+    tr.appendChild(createTextCell(car));
+    tr.appendChild(createButtonCell('delete', () => deleteCar(car)));
+    tr.appendChild(createButtonCell('edit', () => document.location.href = '../car_update/car_update.html?car='+car));
+    tr.appendChild(createButtonCell('view', () => document.location.href = '../car_view/car_view.html?model='+urlParams.get('model')+'&car='+car));
+    return tr;
 }
 
 function deleteCar(car){
