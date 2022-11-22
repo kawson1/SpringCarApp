@@ -29,4 +29,15 @@ export function createButtonCell(text, action) {
     return td;
 }
 
+export function createLinkCell(text, url) {
+    const td = document.createElement('td');
+    const a = document.createElement('a');
+    a.appendChild(document.createTextNode(text));
+    a.href = url;
+    td.appendChild(a);
+    return td;
+}
+
+
+
 

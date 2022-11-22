@@ -14,6 +14,8 @@ public interface CarRepository extends JpaRepository<Car, Long> {
     @Override
     Optional<Car> findById(Long id);
 
+    Optional<Car> findByVin(String vin);
+
     Optional<Car> findByModelAndId(Model model, Long id);
 
     @Override

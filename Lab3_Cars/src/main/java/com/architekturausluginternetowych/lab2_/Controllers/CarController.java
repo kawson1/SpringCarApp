@@ -53,9 +53,19 @@ public class CarController {
         return ResponseEntity.ok(GetAllCarsResponse.entityToDtoMapper().apply(carService.findAll()));
     }
 
-    @DeleteMapping("{id}")
-    public ResponseEntity<Void> deleteCar(@PathVariable Long id){
-        Optional<Car> car = carService.findCarById(id);
+//    @DeleteMapping("{id}")
+//    public ResponseEntity<Void> deleteCar(@PathVariable Long id){
+//        Optional<Car> car = carService.findCarById(id);
+//        if(car.isPresent()){
+//            carService.deleteCar(car.get());
+//            return ResponseEntity.accepted().build();
+//        }
+//        return ResponseEntity.notFound().build();
+//    }
+
+    @DeleteMapping("{vin}")
+    public ResponseEntity<Void> deleteCar(@PathVariable String vin){
+        Optional<Car> car = carService.findCarByVIN(vin);
         if(car.isPresent()){
             carService.deleteCar(car.get());
             return ResponseEntity.accepted().build();

@@ -31,6 +31,8 @@ public class CarService {
         return carRepository.findById(id);
     }
 
+    public Optional<Car> findCarByVIN(String vin) { return carRepository.findByVin(vin); }
+
     /**
      * @param modelname name's model
      * @param id    car's id

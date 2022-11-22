@@ -46,6 +46,8 @@ function createTableRow(model) {
     let tr = document.createElement('tr');
     tr.appendChild(createTextCell(model));
     tr.appendChild(createButtonCell('delete', () => deleteModel(model)));
+    tr.appendChild(createButtonCell('edit', () => document.location.href = '../model_update/model_update.html?model='+model));
+    tr.appendChild(createButtonCell('view', () => document.location.href = '../model_view/model_view.html?model='+model));
     return tr;
 }
 

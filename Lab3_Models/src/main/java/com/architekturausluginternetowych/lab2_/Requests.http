@@ -36,6 +36,8 @@ GET http://localhost:8080/api/cars/1/model
 ###
 DELETE http://localhost:8080/api/cars/1
 ###
+DELETE http://localhost:8080/api/cars/testowy1
+###
 PUT http://localhost:8080/api/cars/1
 Content-Type: application/json
 
@@ -66,6 +68,8 @@ Content-Type: application/json
 GET http://localhost:8080/api/models
 ###
 GET http://localhost:8080/api/models/e46
+###
+GET http://localhost:8080/api/models/e46/cars
 ###
 PUT http://localhost:8080/api/models/e46
 Content-Type: application/json
