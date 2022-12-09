@@ -6,6 +6,9 @@
         <option value="$PROJECT_DIR$/Lab3_Models/pom.xml" />
         <option value="$PROJECT_DIR$/Lab3_Cars/pom.xml" />
         <option value="$PROJECT_DIR$/CarApiGateway/pom.xml" />
+        <option value="$PROJECT_DIR$/M2_server/CarApiGateway/pom.xml" />
+        <option value="$PROJECT_DIR$/M2_server/Lab3_Cars/pom.xml" />
+        <option value="$PROJECT_DIR$/M2_server/Lab3_Models/pom.xml" />
       </list>
     </option>
   </component>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="description" content="Car-Models web application"/>
+    <meta name="keywords" content="Car-Models"/>
+    <meta name="author" content="Łukasz Kawa"/>
+    <title>Car & Models</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <script src="../script.js" defer="defer"></script>
+    <script type="module" src="car_update.js" defer="defer"></script>
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <h1>Cars & Models</h1>
+    </header>
+
+    <nav class="navigation-bar">
+        <ul>
+            <li><a href="../index.html">main</a></li>
+            <li><a href="../about/about.html">about</a></li>
+            <li><a href="../model_list/model_list.html">models</a></li>
+        </ul>
+    </nav>
+
+    <section class="main-section">
+
+        <!--LISTING MODEL SECTION-->
+        <header><h2>Car</h2></header>
+        <h3 id="carVinHeader"></h3>
+        <form id="carForm">
+            <!--            <label for="modelName">Model name:</label><br>-->
+            <!--            <input type="text" id="modelName" name="modelName"><br>-->
+            <label for="color">Color:</label><br>
+            <input type="text" id="color" name="color"><br>
+
+            <input type="submit" value="Update">
+        </form>
+
+    </section>
+
+
+    <footer class="footer">
+        <p>Copyright &copy; 2022, Łukasz Kawa</p>
+    </footer>
+</div>
+</body>
+</html>
