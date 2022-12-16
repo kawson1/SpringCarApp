@@ -10,14 +10,7 @@ COPY start.sh /home/start.sh
 
 RUN apt-get update && \
     apt-get upgrade && \
-    apt-get install -y openjdk-17-jre-headless && \
-    # apt-get install -y nginx && \
-    # apt-get install -y vim &&\
+    apt-get install -y openjdk-17-jre-headless curl && \
     apt-get clean;
-
-# ENTRYPOINT [ "java", "-jar", "/home/model_service.jar" ]
-# ENTRYPOINT [ "nginx", "-g", "deamon off;" ]
-
-# ADD start.sh /home/
 
 CMD ["bash", "/home/start.sh"]

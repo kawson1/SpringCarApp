@@ -1,3 +1,3 @@
 export function getBackendUrl() {
-    return "http://localhost:8083";
+    return "http://localhost:8080";
 }
