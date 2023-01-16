@@ -33,7 +33,8 @@ public class CarApiGatewayApplication {
                 .route("cars", r -> r
                         .host("localhost:8080")
                         .and()
-                        .path("/api/cars/{vin}", "/api/cars","/api/models/{modelname}/cars")
+                        .path("/api/cars/{vin}", "/api/cars","/api/models/{modelname}/cars",
+                                "/api/cars/{vin}/upload", "/api/cars/{vin}/download")
                         .uri("http://localhost:8082"))
                 .build();
 

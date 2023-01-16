@@ -28,4 +28,7 @@ public class Car {
     @JoinColumn(name = "model")
     public Model model;
 
+    @OneToOne
+    @JoinColumn(name = "carImage")
+    public CarImage carImage;
 }

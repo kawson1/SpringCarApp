@@ -1,12 +1,15 @@
 package com.architekturausluginternetowych.lab2_.Services;
 
 import com.architekturausluginternetowych.lab2_.Car;
+import com.architekturausluginternetowych.lab2_.CarImage;
 import com.architekturausluginternetowych.lab2_.Model;
+import com.architekturausluginternetowych.lab2_.Repositories.CarImageRepository;
 import com.architekturausluginternetowych.lab2_.Repositories.CarRepository;
 import com.architekturausluginternetowych.lab2_.Repositories.ModelRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.io.InputStream;
 import java.util.List;
 import java.util.Optional;
 
@@ -60,7 +63,9 @@ public class CarService {
      */
     public List<Car> findAll(Model model){ return carRepository.findAllByModel(model); }
 
-    public void updateCar(Car car) {
-        carRepository.save(car);
+    public void updateCar(Car car) { carRepository.save(car); }
+
+    public void updateImage(CarImage carImage) {
+        carRepository.findByVin(carImage.getVin()).ifPresent(car -> car.setCarImage(carImage));
     }
 }
