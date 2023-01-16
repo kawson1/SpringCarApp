@@ -8,7 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="CarApiGateway" />
-        <module name="Lab2_" />
+        <module name="Lab2_ (2)" />
         <module name="Lab2_ (1)" />
       </profile>
     </annotationProcessing>
@@ -16,6 +16,7 @@
       <module name="CarApiGateway" target="17" />
       <module name="Lab2_" target="17" />
       <module name="Lab2_ (1)" target="17" />
+      <module name="Lab2_ (2)" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
