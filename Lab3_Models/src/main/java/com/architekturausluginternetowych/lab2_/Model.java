@@ -11,7 +11,7 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "models")
+@Table(name = "models", schema = "CAR_APP")
 public class Model {
 
     @Id

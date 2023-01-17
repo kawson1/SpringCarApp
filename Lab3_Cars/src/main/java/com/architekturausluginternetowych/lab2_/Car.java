@@ -11,7 +11,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "cars")
+@Table(name = "cars", schema = "CAR_APP")
 public class Car {
 
     @Id
