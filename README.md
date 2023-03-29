@@ -5,5 +5,6 @@ Projects file are on branches - depends on requirements.
 
 Available versions of application:
   - App for docker
+  - Upload files feature
   - Local server
   - App with or without js
